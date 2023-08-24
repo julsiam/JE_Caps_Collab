@@ -42,7 +42,7 @@ Route::middleware(['auth', 'user-access:tenant'])->group(function () {
 
 
 Route::middleware(['auth', 'user-access:business_owner'])->group(function () {
-    Route::get('/', [HomeController::class, 'ownerDashboard'])->name('business_owner.owner_dashboard')->middleware('verified');
+    Route::get('/', [HomeController::class, 'ownerDashboard'])->name('business_owner.owner_dashboard');
     Route::post('/add_announcement', [AnnouncementController::class, 'addAnnouncement'])->name('announcements.addAnnouncement');  //announcements is the table db name....addAnnouncement is the class in controller
     Route::get('/business_owner/announcement', [AnnouncementController::class, 'index'])->name('announcement');
     Route::get('/announcements/search', [AnnouncementController::class, 'search'])->name('announcements.search');
@@ -64,6 +64,10 @@ Route::middleware(['auth', 'user-access:business_owner'])->group(function () {
     });
     Route::get('/maintenance_details', function () {
         return view('./business_owner/show_maintenance');
+    });
+
+    Route::get('/properties', function () {
+        return view('./business_owner/properties');
     });
 
 
