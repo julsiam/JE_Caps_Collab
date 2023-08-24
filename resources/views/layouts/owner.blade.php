@@ -66,7 +66,7 @@
                             </a>
                         </li>
 
-                        {{-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link {{ request()->is('tenants') ? 'active' : null }}" aria-current="page"
                                 href="{{ url('/tenants') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
@@ -76,9 +76,9 @@
                                 </svg>
                                 Tenants
                             </a>
-                        </li> --}}
+                        </li>
 
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <a id="navbarDropdown"
                                 class="nav-link dropdown-toggle {{ request()->is('tenants') ? 'active' : null }}"
                                 aria-current="page" href="#" role="button" data-bs-toggle="dropdown"
@@ -128,7 +128,7 @@
                                 </a>
 
                             </div>
-                        </li>
+                        </li> --}}
 
 
 
